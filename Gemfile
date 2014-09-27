@@ -9,11 +9,14 @@ gem 'rails', '4.0.2'
 	  gem 'better_errors' # Better error page
 	  gem 'binding_of_caller' # Adds functionality to better_errors
 	  gem 'meta_request'  # Works with RailsPanel in Chrome (Add RailsPanel from google store)
+	  gem 'rails-erd'	# Drawing Entity Relationship Diagrams using graphviz
 	end
 
 	group :development, :test do
 	  gem 'sqlite3'
 	  gem 'rspec-rails', '2.13.1'  #access to RSpec generators
+	  gem 'byebug' # Successor to 'debugger'
+	  gem 'faker'
 	end
 
 	# Use Oracle in development i.e., primary or legacy db's
@@ -67,6 +70,14 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# Paginator
+gem 'kaminari'
+
+# Add my GroupedOptions gem for Making Grouped Selects from non-associated database
+# gem 'grouped_options', path: '~/projects/gems/grouped_options'
+gem 'grouped_options', git: 'git@github.com:marcmentis/grouped_options.git'
+
 
 
 # Use ActiveModel has_secure_password

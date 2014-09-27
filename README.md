@@ -1,36 +1,95 @@
-# Rails-Startup Application
+## Has the following gemfile
 
-`Rails-Startup` is designed to help developers write Ruby on Rails (_Rails_) applications within the _nys-its_. The Rails-Startup `code` can be used (i) to fast-track Rails application development, or (ii) as a template that you can use in your own applications. 
+```ruby
+source 'https://rubygems.org'
+# ruby '2.0.0'
 
-This README references pages in the `Rails-Toolkit Wiki` that give more detail on each of the `versions` that make up the `master` branch. (The Rails-Toolkit [Wiki](https://github.com/nys-its/rails-toolkit/wiki) itself contains more than `Rails-Startup` information and is a resource for information on learning Rails, and becoming part of the _ITS-Rails_ programming community.)
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.2'
 
-**Requirements:** This setup is designed for _Rails_ v4.0.2, _Ruby_ v2.0.0. (Developers using Windows-RailsInstaller setup are constrained to _Ruby_ v2.0.0. **Don't install _Rails_ >= v4.1** as it requires _Ruby_ >= v2.1)
+# Split into groups
+  group :development do
+    gem 'better_errors' # Better error page
+    gem 'binding_of_caller' # Adds functionality to better_errors
+    gem 'meta_request'  # Works with RailsPanel in Chrome (Add RailsPanel from google store)
+    gem 'rails-erd' # Drawing Entity Relationship Diagrams using graphviz
+  end
 
-### How to Use `Rails-Startup`
-##### Fast-track your _Rails_ application development
-* Clone `Rails-Startup` to your machine's 'projects' folder. 
-* `Basic Configuration`
-  * If you want to use all of the basic configuration, do nothing more, leave `head` at v0.05. Basic configuration includes the following installed and configured: home page, testing gems, debugging gems, mobile first responsive design gem, secret file.
-  * If you want some, but not all, of the 'basic configuration' you can `checkout` the appropriate `tag` on the `master` branch. You will get cumulatively more `basic configuration` as you `checkout` `tags` from v0.01 through v0.05.
-    * [v0.01](https://github.com/nys-its/rails-toolkit/wiki/v0.01-StaticPages-Home-Page) Static Pages tag - Home Page, README.md (.rdoc converted to .md)
-    * [v0.02](https://github.com/nys-its/rails-toolkit/wiki/v0.02-Testing) Testing tag - RSpec, Capybara, Spork, FactoryGirl
-    * [v0.03](https://github.com/nys-its/rails-toolkit/wiki/v0.03-Debugging) Debugging tag - ByeBug, BetterErrors, RailsPanel
-    * [v0.04](https://github.com/nys-its/rails-toolkit/wiki/v0.04-Mobile Responsive) Mobile First Responsive Design tag - Zurb Foundation
-    * [v0.05](https://github.com/nys-its/rails-toolkit/wiki/v0.05-Secret File) Supports a _secret file_ on server for sensitive information
-* `Specific Functionality` 
-  * Will be added over time as useful functional needs are identified
-  * Will be found on `branches`. Every `branch` will be a child of `v0.04`.
-  * To get the `specific function` on your machine, `checkout` `master` and merge the appropriate `branch`.
+  group :development, :test do
+    gem 'sqlite3'
+    gem 'rspec-rails', '2.13.1'  #access to RSpec generators
+    gem 'byebug' # Successor to 'debugger'
+    gem 'faker'
+  end
 
-##### Use code as a template that you can use in your own applications
-* Clone `RAILS-poc` to your machine's 'code' folder.
-* View code in editor
+  # Use Oracle in development i.e., primary or legacy db's
+  # group :development do
+  #   gem "activerecord-oracle_enhanced-adapter", "~> 1.5.0"
+  #   gem 'ruby-oci8', '~> 2.1.0'
+  #   gem 'rspec-rails', '2.13.1'
+  # end
 
-**DESKTOP VIEW   v0.04 Home Page with Mobile Responsive Navigation**
+  group :test do
+    gem 'selenium-webdriver', '2.35.1'  # capybara dependency
+    gem 'capybara', '2.1.0' #Simulate users BEHAVIOR.
+    gem 'spork-rails', '4.0.0'  # To Speed up RSpec
+    gem 'factory_girl_rails', '4.2.0'  #Factory to generate data
+  end
 
-![railsmobilehome](https://cloud.githubusercontent.com/assets/6201245/3870016/9e62ca40-20b6-11e4-8e83-f6f871b5143b.png)
+  group :production do
+    gem "activerecord-oracle_enhanced-adapter", "~> 1.5.0"
+    gem 'ruby-oci8', '~> 2.1.0'
+  end
 
-**PHONE VIEW   v0.04 Home Page with Mobile Responsive Navigation**
+  # group :production do
+  #   gem 'sqlite3', '1.3.8'
+  # end
 
-![railsmobilesize2](https://cloud.githubusercontent.com/assets/6201245/3869823/7d64e48a-20a8-11e4-8e0a-9ed1f9bf035e.png)
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 1.2'
+
+# Mobile First Responsive Design
+gem 'foundation-rails'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+# Paginator
+gem 'kaminari'
+
+# Add my GroupedOptions gem for Making Grouped Selects from non-associated database
+# gem 'grouped_options', path: '~/projects/gems/grouped_options'
+gem 'grouped_options', git: 'git@github.com:marcmentis/grouped_options.git'
+
+
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.1.2'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
+```
 
