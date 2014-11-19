@@ -36,10 +36,12 @@ gem 'rails', '4.0.2'
 	group :production do
 	  gem "activerecord-oracle_enhanced-adapter", "~> 1.5.0"
 	  gem 'ruby-oci8', '~> 2.1.0'
+	  # gem 'faker'
 	end
 
 	# group :production do
 	#   gem 'sqlite3', '1.3.8'
+	#   gem 'faker'
 	# end
 
 # Use SCSS for stylesheets
@@ -58,7 +60,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -77,6 +79,13 @@ gem 'kaminari'
 # Add my GroupedOptions gem for Making Grouped Selects from non-associated database
 # gem 'grouped_options', path: '~/projects/gems/grouped_options'
 gem 'grouped_options', git: 'git@github.com:marcmentis/grouped_options.git'
+
+# Form Filter for Table Searches
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4'
+
+# Authorization
+gem 'pundit', '~> 0.3.0'
+
 
 
 
