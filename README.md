@@ -1,3 +1,21 @@
+## Clone Dev, Create Feature Branch, Push,s Pull Request
+
+To clone the dev branch:       
+`$ git clone -b dev https://githubcom/marcmentis/rails402startup2 <choose_a_name>`         
+Enter new directory          
+`$ cd <choose_a_name`        
+Check you have the dev branch         
+`$ git branch`          
+Create your "feature" branch (off dev)          
+`$ git checkout -b <your_last_name>`           
+After some commits push feature branch and create "upstream"          
+`$ git push -u origin <your_last_name>`           
+All future pushes          
+`$ git push origin <your_last_name>`       
+To create a pull request         
+`$ https://help.github.com/articles/creating-a-pull-request/`     
+
+
 ## Has the following gemfile
 
 ```ruby
@@ -39,10 +57,12 @@ gem 'rails', '4.0.2'
   group :production do
     gem "activerecord-oracle_enhanced-adapter", "~> 1.5.0"
     gem 'ruby-oci8', '~> 2.1.0'
+    # gem 'faker'
   end
 
   # group :production do
   #   gem 'sqlite3', '1.3.8'
+  #   gem 'faker'
   # end
 
 # Use SCSS for stylesheets
@@ -61,7 +81,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -81,6 +101,13 @@ gem 'kaminari'
 # gem 'grouped_options', path: '~/projects/gems/grouped_options'
 gem 'grouped_options', git: 'git@github.com:marcmentis/grouped_options.git'
 
+# Form Filter for Table Searches
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4'
+
+# Authorization
+gem 'pundit', '~> 0.3.0'
+
+
 
 
 # Use ActiveModel has_secure_password
@@ -91,5 +118,7 @@ gem 'grouped_options', git: 'git@github.com:marcmentis/grouped_options.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
+
+
 ```
 
