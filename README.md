@@ -1,9 +1,11 @@
-## Clone Dev, Create Feature Branch, Push,s Pull Request
+## Clone Dev, Create Feature Branch, Push, Pull Request
 
 To clone the dev branch:       
-`$ git clone -b dev https://githubcom/marcmentis/rails402startup2 <choose_a_name>`         
+`$ git clone -b dev https://github.com/marcmentis/rails402facs.git <choose_a_name>`         
 Enter new directory          
 `$ cd <choose_a_name`        
+Because of "Secret" File. In Config folder remember to:           
+`Copy 'example_application.yml' into a new 'application.yml' file`        
 Check you have the dev branch         
 `$ git branch`          
 Create your "feature" branch (off dev)          
