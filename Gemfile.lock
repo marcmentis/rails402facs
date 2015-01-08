@@ -17,7 +17,7 @@ GIT
     grouped_options (0.0.2)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
