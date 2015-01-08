@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 # ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 # Split into groups
 	group :development do
 	  gem 'better_errors' # Better error page
-	  gem 'binding_of_caller' # Adds functionality to better_errors
+#	  gem 'binding_of_caller' # Adds functionality to better_errors
 	  gem 'meta_request'  # Works with RailsPanel in Chrome (Add RailsPanel from google store)
 	  gem 'rails-erd'	# Drawing Entity Relationship Diagrams using graphviz
 	end
@@ -15,7 +15,7 @@ gem 'rails', '4.0.2'
 	group :development, :test do
 	  gem 'sqlite3'
 	  gem 'rspec-rails', '2.13.1'  #access to RSpec generators
-	  gem 'byebug' # Successor to 'debugger'
+	# gem 'byebug' # Successor to 'debugger'
 	  gem 'faker'
 	end
 
@@ -78,10 +78,10 @@ gem 'kaminari'
 
 # Add my GroupedOptions gem for Making Grouped Selects from non-associated database
 # gem 'grouped_options', path: '~/projects/gems/grouped_options'
-gem 'grouped_options', git: 'git@github.com:marcmentis/grouped_options.git'
+gem 'grouped_options', git: 'https://github.com/marcmentis/grouped_options.git'
 
 # Form Filter for Table Searches
-gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4'
+gem 'ransack', git: 'https://github.com/activerecord-hackery/ransack', branch: 'rails-4'
 
 # Authorization
 gem 'pundit', '~> 0.3.0'

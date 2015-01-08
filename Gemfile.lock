@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/activerecord-hackery/ransack.git
+  remote: https://github.com/activerecord-hackery/ransack
   revision: d1fc95b3c21c8294e69c70e3995459d11dabfd67
   branch: rails-4
   specs:
@@ -11,13 +11,13 @@ GIT
       polyamorous (~> 1.1)
 
 GIT
-  remote: git@github.com:marcmentis/grouped_options.git
-  revision: 48dac238a2d81c2cacb21c92e57c481dbda042ce
+  remote: https://github.com/marcmentis/grouped_options.git
+  revision: 9ae5c6e442ba107ee4c07cbde98c38a5830c49f2
   specs:
-    grouped_options (0.0.1)
+    grouped_options (0.0.2)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
@@ -48,13 +48,7 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     builder (3.1.4)
-    byebug (3.4.2)
-      columnize (~> 0.8)
-      debugger-linecache (~> 1.2)
-      slop (~> 3.6)
     callsite (0.0.11)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -73,9 +67,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    columnize (0.8.9)
-    debug_inspector (0.0.2)
-    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
@@ -178,7 +169,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
-    slop (3.6.0)
     spork (1.0.0rc4)
     spork (1.0.0rc4-x86-mingw32)
       win32-process
@@ -219,8 +209,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord-oracle_enhanced-adapter (~> 1.5.0)
   better_errors
-  binding_of_caller
-  byebug
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   factory_girl_rails (= 4.2.0)
