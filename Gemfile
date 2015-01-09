@@ -85,6 +85,12 @@ gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4'
 
 # Authorization
 gem 'pundit', '~> 0.3.0'
+# sass
+gem 'sass'
+gem 'compass'
+
+
+
 
 
 
